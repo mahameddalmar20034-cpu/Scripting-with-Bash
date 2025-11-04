@@ -42,8 +42,14 @@ This adds a layer of interactivity by adding arguments that can be used in the a
 length=$1
 width=$2
 area=$((length * width))
+perimeter=$((2 * (length * width)))
 echo "The area is $area"
+echo "The perimeter is $perimeter"
 ./script.sh 2 5 
+
+
+If statements
+
 
 
 
