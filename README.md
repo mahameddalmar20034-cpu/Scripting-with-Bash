@@ -49,6 +49,35 @@ echo "The perimeter is $perimeter"
 
 
 If statements
+If statements allow you to make decisions by executing different code blocks depending on the condition met.This is carried out using comparison operators such as ge (greater than or equal to) and gt (greater than) or logical operators like && (and) and || (or).
+An example is as follows
+name="Mahamed"
+grade=85
+if [ "$name" == Mahamed ] && [ $grade -ge 75 ]  ;then
+echo "Hello Mahamed you have passed"
+fi
+Another example 
+grade=85
+if [ $grade -gt 70 ]  && [ $grade -lt 90 ]; then
+echo "You are getting there keep going"
+fi
+
+else and elif
+If the conditions fails then else and elif clauses allow for alternatives paths to be executed.That add a layer of depth and versatility.
+for example :
+grade=1
+if [ $grade -ge 90 ];then
+echo "Allahumbarak Akhi you smashed it"
+elif [ $grade -ge 75 ];then
+echo "You smashed it Akhi your getting closer"
+elif [ $grade -lt 75 ];then
+echo "Keep trying Akhi you will get there InshaAllah"
+fi
+
+
+Nested if statements
+
+
 
 
 
