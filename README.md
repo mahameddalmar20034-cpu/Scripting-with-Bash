@@ -76,6 +76,22 @@ fi
 
 
 Nested if statements
+They allow for the evaluation of multiple conditions and execution of different code blocks.They allow for deicision making in difficult scenarios.Further adding a layer of depth and versatility.
+age=20
+grade=80
+if [ $age -ge 18 ]; then
+echo "You are eligibile based on age."
+if [ $grade -ge 70 ]; then 
+echo "You have also qualified based on grade."
+echo "You have qualified for the scholarship."
+else 
+echo "You have not qualified based on grade."
+fi
+else
+echo " You are too young and hence uneligible."
+fi
+
+
 
 
 
