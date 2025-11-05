@@ -92,6 +92,35 @@ echo " You are too young and hence uneligible."
 fi
 
 
+While loops
+Can be used for automating tasks and iterating over data.This is done by continuiously executing  a block of code until the conditions are no longer met.
+Some examples:
+count=4
+while [ $count -lt 10 ]; do
+echo "Count:$count"
+((count++))
+
+fruits=("apple" "banana" "cherry")
+index=0
+while [ $index -lt ${#fruits[@]} ]; do
+echo "Fruit: ${fruits[$index]}"
+((index++))
+done
+
+
+For loops
+
+
+
+
+
+
+for number in $(seq 4 9)
+do
+echo "Number:$number"
+done
+
+
 
 
 
