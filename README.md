@@ -76,7 +76,7 @@ fi
 
 
 Nested if statements
-They allow for the evaluation of multiple conditions and execution of different code blocks.They allow for deicision making in difficult scenarios.Further adding a layer of depth and versatility.
+They allow for the evaluation of multiple conditions and execution of different code blocks.They allow for handling of complex deicision making scenarios.Further adding a layer of depth and versatility.
 age=20
 grade=80
 if [ $age -ge 18 ]; then
