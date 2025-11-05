@@ -109,9 +109,12 @@ done
 
 
 For loops
-
-
-
+They allow you to iterate over sequence or a range of values.Allows you to execute the code block for each iteration.They are used for arrays ,lists of values and ranges. 
+Some examples:
+fruits=("Banana" "Blueberry" "Cherry")
+for fruits in "${fruits[@]}" ; do
+echo "Fruits:$fruits"
+done
 
 
 
@@ -119,6 +122,12 @@ for number in $(seq 4 9)
 do
 echo "Number:$number"
 done
+
+
+for (( i=1 ; i<=10 ; i++ )) ; do
+echo "Number: $i"
+done
+
 
 
 
