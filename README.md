@@ -129,18 +129,15 @@ echo "Number: $i"
 done
 
 Break and continue
-
-
+Break statement exits the inner most loop its placed in.The continue statement skips the rest of the current iteration for the loop and skips to the next iteration.Both break and continue are useful for finetuning for and while loops.
+Here are some examples:
 
 for (( i=1 ; i<=10 ; i++ )) ; do
-
 if [ $i -eq 5 ] ; then
 continue
 fi
 echo "Number:$i"
 done
-
-
 
 count=2
 while true
@@ -152,6 +149,17 @@ break
 fi
 done
 
+count=2
+while [ $count -le 5 ]
+do
+if [ $count -eq 3 ]
+then
+((count++))
+continue
+fi
+echo "Count:$count"
+((count++))
+done
 
 
 
