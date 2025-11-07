@@ -164,13 +164,8 @@ done
 
 
 Basics of functions
-Functions are useful for writing
-
-
-
-
-
-
+A function is a reusable block of code inside a script that you can call like a command.You can also pass paramters(arguments) to refine the level of detail.
+Here are some examples:
 
 hello_world() {
     echo "Hello, World!"
@@ -184,6 +179,48 @@ greet_person() {
     echo "Hello, $name!"
     }
 greet_person "Mahamed"
+
+Positional/Special Parameters
+Special parameters are useful for providing additional information about a script.
+An example:
+
+print_args() {
+    echo "Name of script: "$0""
+    echo "Number of arguments(paramters): "$#""
+    echo "First parameter:"$1""
+    echo "Second parameter: "$2""
+    echo "All parameters: "$@""
+
+}
+
+print_args "Boy" "Man" "Alien"
+
+
+User inputs
+An example of an User input is read me.This is a interactive as well as useful way for providing information where the parameter has not.They can be combined with parameters to offer flexibility in how inputs are accepted.
+
+greet() {
+    echo "What is your name?"
+    read name
+    echo "Hello,$name!"
+}
+
+greet
+
+greet() {
+    local name
+    if [ $# -eq 0 ] ;then
+    echo "What is your name?"
+    read name 
+    
+    else
+    name="$1"
+    echo "Hello, $name!"
+    fi
+    echo "Hello, $name!"
+ }
+
+greet "Dalmar"
 
 
 
