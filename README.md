@@ -197,8 +197,8 @@ print_args "Boy" "Man" "Alien"
 
 
 User inputs
-An example of an User input is read me.This is a interactive as well as useful way for providing information where the parameter has not.They can be combined with parameters to offer flexibility in how inputs are accepted.
-
+An example of an User input is read name.This is an interactive as well as useful way for providing information where the parameter has not been provided.They can be combined with parameters to offer flexibility in how inputs are accepted.
+Some example of this:
 greet() {
     echo "What is your name?"
     read name
