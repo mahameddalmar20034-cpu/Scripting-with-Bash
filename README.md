@@ -163,6 +163,33 @@ done
 
 
 
+Basics of functions
+Functions are useful for writing
+
+
+
+
+
+
+
+hello_world() {
+    echo "Hello, World!"
+    }
+hello_world
+
+
+
+greet_person() {
+    local name="$1"
+    echo "Hello, $name!"
+    }
+greet_person "Mahamed"
+
+
+
+
+
+
 
 
 
