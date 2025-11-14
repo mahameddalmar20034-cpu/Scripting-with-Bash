@@ -225,6 +225,36 @@ greet "Dalmar"
 
 
 Handling bad data
+Coniditional statements can be used to validate user inputs to gurantee the criteria is met.Exit codes can be optimised to provide feedback to the user whether a code has been exectued succesfully or not.Also input santization can be carried out using paramater expansion and patent subsitution to clean and transform user inputs to meet the required format.Here are some examples below:
+
+validate_age() {
+local age=$1
+    if [[ ! $age =~ ^[0-9]+$ ]] ;then
+    echo "invalid age: $age is not a valid number"
+    return 1
+    fi
+   if ((age < 18));then
+   echo "Sorry you must be at least 18 years old."
+   return 1
+   fi
+   echo "Congrats at $age your eligible to vote!"
+   return 0
+}
+
+validate_age "17"
+
+sanatize_string(){
+local input="$1" 
+local sanatized_input=${input//[^a-zA-Z0-9]/}
+echo "$sanatized_input"
+
+}
+
+echo "Please enter a username:"
+read input_username
+sanatized_username=$(sanatize_string "$input_username")
+echo "Sanitized username: $sanatized_username"
+
 
 
 
