@@ -256,6 +256,26 @@ sanatized_username=$(sanatize_string "$input_username")
 echo "Sanitized username: $sanatized_username"
 
 
+Piping
+Piping allows you to pass the output of a command as the input of the other command.Allows the execution of advanced data operation ands store the results in variables.It can be combined with other commands or functions  for more complex data manipulation pipelines. Here are some examples:
+
+get_filecount() {
+    local directory=$1
+    local file_count
+    file_count=$(ls $directory | wc -l)
+    echo "The number of files in $directory is $file_count"
+
+}
+ get_filecount "./"
+
+
+ search_logs() {
+    local search_term="$1"
+    grep "$search_term" Arena | awk '{ print $2 }'
+}
+
+search_logs "error"
+
 
 
 
