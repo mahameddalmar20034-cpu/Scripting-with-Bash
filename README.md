@@ -277,6 +277,24 @@ get_filecount() {
 search_logs "error"
 
 
+Introduction to error handling
+Error handling is useful for preventing crashes whilst giving you feedback.It makes your scripts reliable,safer and easier to use.Here is an example:
+
+num1=17
+num2=0
+if [ $num2 -eq 0 ]; then
+echo "Error:Division by is zero is not possible."
+exit 1
+fi
+result=$((num1 / num2))
+
+echo "The result is: $result"
+
+
+
+
+
+
 
 
 
