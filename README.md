@@ -322,6 +322,21 @@ y=10
 z=$(( x + y + w))
 echo "z=$z"
 
+Set -x
+This is useful for tracing the flow of the script.It prints each command before executing aswell as expanding variables.This is practical for debugging and when handling sensitive code to allow you to spot errors and retrace your steps.An example is as follows:
+
+
+set -x
+echo "This is the start of the script."
+X=5
+Y=7
+Z=$((X+Y))
+echo "The value of Z is:$Z"
+set +x
+echo "This is the end of the script bye."
+
+Set -eux
+
 
 
 
