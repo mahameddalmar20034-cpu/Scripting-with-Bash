@@ -305,7 +305,27 @@ fi
 
 
 Set -e 
+What this command does is end the script as soon as there is a non zero exit code and prevents the rest of the script from being executed.This is essential as it proctects the system and allows for easy debugging.However sometimes there is a non zero exit code but we still want teh rest of the script to execeute so it isnt always necessary.An example of this:
 
+
+set -e
+echo "Before the script"
+Nonexistantcommand
+echo "After the script"
+
+ Set -u
+ This is used to identify a variable that has been used is undefined.This is useful for preventing running into potential issues due to missing data.Overall its useful for reliability and easy debugging.An example is as follows:
+
+set -u
+x=5
+y=10
+z=$(( x + y + w))
+echo "z=$z"
+
+
+
+
+ 
 
 
 
