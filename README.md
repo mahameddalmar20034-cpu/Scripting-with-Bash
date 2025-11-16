@@ -340,7 +340,14 @@ All three can be combined to make debugging much easier and handling the scripts
 
 Additional Set commands
 
-There are more set commands like set -o nounset which behaves identical to set -u as well as set -o errexit which behaves identical to set -e.A new example is set -o pipefail
+There are more set commands like set -o nounset which behaves identical to set -u as well as set -o errexit which behaves identical to set -e.A new example is set -o pipefail how it works is that it ends the scrip where the pipefails the exit code of the pipe is whatever the last command is.Sometimes in a pipe if the second command runs no matter if the first one still doesnt the exit code is 0.However the command set -o pipefail prevents this with the pipe ending with the first fail.This allows for safer and more reliable scripts.
+
+set -o pipefail
+cat nonexiste | grep "something"
+echo "exit code: $?"
+
+
+
 
 
 
