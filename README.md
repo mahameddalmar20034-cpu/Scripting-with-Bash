@@ -305,7 +305,7 @@ fi
 
 
 Set -e 
-What this command does is end the script as soon as there is a non zero exit code and prevents the rest of the script from being executed.This is essential as it proctects the system and allows for easy debugging.However sometimes there is a non zero exit code but we still want teh rest of the script to execeute so it isnt always necessary.An example of this:
+What this command does is end the script as soon as there is a non zero exit code  following a failed command.It prevents the rest of the script from being executed.This is essential as it proctects the system and allows for easy debugging.However sometimes there is a non zero exit code but we still want the rest of the script to execeute so it isnt always necessary.An example of this:
 
 
 set -e
@@ -314,7 +314,7 @@ Nonexistantcommand
 echo "After the script"
 
  Set -u
- This is used to identify a variable that has been used is undefined.This is useful for preventing running into potential issues due to missing data.Overall its useful for reliability and easy debugging.An example is as follows:
+ This ends the script at the undefined variable.Hence this can be used to identify a variable that is undefined.This is useful for preventing running into potential issues due to missing data.Overall its useful for reliability and easy debugging.An example is as follows:
 
 set -u
 x=5
@@ -335,7 +335,11 @@ echo "The value of Z is:$Z"
 set +x
 echo "This is the end of the script bye."
 
-Set -eux
+Set -eux 
+All three can be combined to make debugging much easier and handling the scripts safer preventing the propagation of error.However this should only be done meticulously considering the specific requirements and context of the script.
+
+
+
 
 
 
