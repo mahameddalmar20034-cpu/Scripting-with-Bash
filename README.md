@@ -338,6 +338,10 @@ echo "This is the end of the script bye."
 Set -eux 
 All three can be combined to make debugging much easier and handling the scripts safer preventing the propagation of error.However this should only be done meticulously considering the specific requirements and context of the script.
 
+Additional Set commands
+
+There are more set commands like set -o nounset which behaves identical to set -u as well as set -o errexit which behaves identical to set -e.A new example is set -o pipefail
+
 
 
 
