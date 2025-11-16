@@ -291,6 +291,24 @@ result=$((num1 / num2))
 echo "The result is: $result"
 
 
+Exit codes
+Knowing how to use exit codes correctly is a critical part of handling scripts. "?$" is used to to see the exit code of the last command executed.A non zero exit code means it was unsuccesful and vice versa.Here -v is used to search for a variable in this case a command.-F can be used to search for a file. An example is as follows:
+
+command -v git 2>/dev/null
+if [[?$ -ne 0 ]]; then
+echo "Git is not istalled. Please install Git."
+exit 1
+else
+echo "Git is installed."
+fi
+
+
+
+Set -e 
+
+
+
+
 
 
 
