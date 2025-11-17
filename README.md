@@ -348,6 +348,11 @@ echo "exit code: $?"
 
 
 
+Change Path permanently
+
+You can write your own commands and execute them from anywhere.By adding your command to the $PATH shell.By adding your directory containing the file to your script using echo "export PATH=$PATH:~/Thescripts" >> ~/.zshrc followed by source.zshrc.This can be used to further enhances work efficency and bolstering productivity.
+
+
 
 
 
