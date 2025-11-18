@@ -354,6 +354,28 @@ You can write your own commands and execute them from anywhere.By adding your co
 
 
 
+Reading Enviroment Variables/Standard Enviromental Variables
+Enviromental variables are stored settings within the operating that provide the shell key information to the shell and programs.By looking at them it provide valuable insights for example the system and user .It can be used within the bash script to store and retrieve important information within the bash script.You can also  assign  local variables to make it more readable.Here are some examples:
+
+my_user=$USER
+my_os=$OSTYPE
+my_home=$HOME
+
+echo "Home is $my_home"
+echo "User is $my_user"
+echo "OS is $my_os"
+
+echo "Username: $LOGNAME"
+echo "Current Directory: $PWD"
+echo "Shell: $SHELL"
+
+echo "Executable Paths:$PATH"
+echo "Default Language:$LANG"
+
+
+
+
+
 
 
 
