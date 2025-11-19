@@ -399,6 +399,16 @@ process_file "if.sh"
 
 
 Writing Files
+Redirection (>) can be used to create a new file or overwrite the contents of a file.Appending (>>) allows you to add without overwriting content to a already existing file.Here is an example:
+
+
+#!/bin/bash
+write_file() {
+    local file_path="$1"
+    local data="$2"
+    echo "$data" >> "$file_path"
+}
+write_file "if.sh" "Hey!"
 
 
 
