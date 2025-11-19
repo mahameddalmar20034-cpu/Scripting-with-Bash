@@ -372,7 +372,33 @@ echo "Shell: $SHELL"
 echo "Executable Paths:$PATH"
 echo "Default Language:$LANG"
 
+Reading Files
+While loops and redirection can be used to read the contents of a file line by line.This can also be done using the cat command and then piping it to generate each line one by one.This is a vital skill.Here are some examples:
 
+
+#!/bin/bash
+read_file() {
+    local file_path=$1
+    while ifs= read -r line; do
+    echo "$line"
+    done < "$file_path"
+}
+read_file "if.sh"
+
+
+
+process_file() {
+    local file_path="$1"
+    cat "$file_path" | while IFS= read -r line; do
+    #processing line 
+    echo "Processing line: $line"
+    done
+
+}
+process_file "if.sh"
+
+
+Writing Files
 
 
 
