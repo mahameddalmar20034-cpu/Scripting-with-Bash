@@ -401,7 +401,6 @@ process_file "if.sh"
 Writing Files
 Redirection (>) can be used to create a new file or overwrite the contents of a file.Appending (>>) allows you to add without overwriting content to a already existing file.Here is an example:
 
-
 #!/bin/bash
 write_file() {
     local file_path="$1"
@@ -409,6 +408,39 @@ write_file() {
     echo "$data" >> "$file_path"
 }
 write_file "if.sh" "Hey!"
+
+File Checksums
+A checksum is the files unique fingerprint.You can different alogrithims such as md5sum and sha256sum to check the checksum of a file.You can compare checksums to test the integrity and authenticity of a file.Here are some examples:
+
+
+calculate_md5sum() {
+    local file_path="$1"
+    md5sum "$file_path"
+}
+calculate_md5sum "if.sh"
+
+
+
+
+calculate_sha256sum() {
+    local file_path="$1"
+    sha256sum "$file_path"
+}
+calculate_sha256sum "if.sh
+
+compare_checksum() {
+    local file_path1="$1"
+    local file_path2="$2"
+    checksum1=$(md5sum "$file_path1" | awk '{print $1}')
+    checksum2=$(md5sum "$file_path2" | awk '{print $1}')
+    if [[ "$checksum1" == "$checksum2" ]]; then
+    echo "The files match.They are identical."
+    else 
+    echo "The files do not match.They are different."
+    fi
+    
+}
+compare_checksum "if.sh" "if.sh"
 
 
 
