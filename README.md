@@ -420,8 +420,6 @@ calculate_md5sum() {
 calculate_md5sum "if.sh"
 
 
-
-
 calculate_sha256sum() {
     local file_path="$1"
     sha256sum "$file_path"
