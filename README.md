@@ -470,7 +470,7 @@ else
 fi
 
 Level 4 
-# when making the directory the location of the backup directory was needed for some reason "~" wasnt allowed so had to place $HOME there not sure why.?.However the *.txt was already in Arena (so not needed) but where it was moved to needed to have its location.(Basically foreign to the directory your in needs its exact location.
+# when making the directory the location of the backup directory was needed  so $HOME was used. ~ and $HOME are the same thing however you can't use ~ in quotes sp $HOME is preferred.After that the *.txt was already in Arena (so not needed) but where it was moved to needed to have its location.(Basically foreign to the directory your in needs its exact location.
 
 vi level4.sh
 #!/bin/bash
