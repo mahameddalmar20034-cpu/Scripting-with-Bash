@@ -443,6 +443,16 @@ compare_checksum "if.sh" "if.sh"
 
 
 
+Bash Battle Arena
+
+Level 1
+mkdir Arena
+touch warrior.txt mage.txt archer.txt
+
+Level 2
+
+
+
 
 
 
