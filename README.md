@@ -471,10 +471,39 @@ fi
 
 Level 4 
 # when making the directory the location of the backup directory was needed for some reason "~" wasnt allowed so had to place $HOME there not sure why.?.However the *.txt was already in Arena (so not needed) but where it was moved to needed to have its location.(Basically foreign to the directory your in needs its exact location.
+
 vi level4.sh
 #!/bin/bash
 mkdir "$HOME/Backup"
 mv *.txt ~/Backup/
+
+Level 5
+
+vi level5.sh
+
+#!/bin/bash
+mkdir $HOME/Battlefield
+touch $HOME/Battlefield/knight.txt $HOME/Battlefield/sorcerer.txt $HOME/Battlefield/rogue.txt
+file_path="$HOME/Battlefield/knight.txt"
+if [[ -f "$file_path" ]] ;then
+        echo "Knight exists"
+        mkdir $HOME/Archive
+        mv $HOME/Battlefield/knight.txt  $HOME/Archive
+        echo "Knight has been moved"
+        else
+                echo"Huh?"
+                fi
+
+echo "Content of Battlefield:"
+ls "$HOME/Battlefield"
+echo "Contents of Archive:"
+ls "$HOME/Archive"
+
+
+
+
+
+
 
 
 
