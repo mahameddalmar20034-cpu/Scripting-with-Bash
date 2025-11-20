@@ -459,6 +459,7 @@ while [ $count -le 10 ];do
 done
 
 Level 3
+
 vi level3.sh
 #!/bin/bash
 file_path="$hero.txt"
@@ -467,6 +468,15 @@ if [[ -f "$file_path" ]]; then
 else
         echo "Hero missing!"
 fi
+
+Level 4 
+
+vi level4.sh
+#!/bin/bash
+mkdir "$HOME/Backup"
+mv *.txt ~/Backup/
+
+
 
 
 
