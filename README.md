@@ -450,6 +450,23 @@ mkdir Arena
 touch warrior.txt mage.txt archer.txt
 
 Level 2
+vi level2.sh
+#!/bin/bash
+count=1
+while [ $count -le 10 ];do
+        echo "Count: $count"
+        ((count++))
+done
+
+Level 3
+vi level3.sh
+#!/bin/bash
+file_path="$hero.txt"
+if [[ -f "$file_path" ]]; then
+        echo "Hero found!"
+else
+        echo "Hero missing!"
+fi
 
 
 
