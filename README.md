@@ -501,6 +501,28 @@ ls "$HOME/Archive"
 
 
 
+Level 6
+
+vi level6.sh
+#!/bin/bash
+line_reader() {
+        local file_path="$1"
+        if [[ -f "$file_path" ]]; then
+                lines=$(cat "$file_path" | wc -l)
+
+echo "The number of lines in "$file_path" is:$lines"
+
+        else
+                echo "No file provided"
+
+        fi}
+line_reader "level5.sh"
+
+
+
+
+
+
 
 
 
