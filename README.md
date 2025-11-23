@@ -519,6 +519,13 @@ echo "The number of lines in "$file_path" is:$lines"
 line_reader "level5.sh"
 
 
+Level 7 
+# could not use the glob in the file_path variable as bash doesnt expand it and so it had to be seperated.
+#!/bin/bash
+file_path="$HOME/Backup/"
+echo "Listing order of txt files from smallest to Largest:"
+ls -lh "$file_path"/*.txt | sort -h | awk '{print $9}'
+
 
 
 
