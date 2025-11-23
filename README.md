@@ -527,6 +527,10 @@ echo "Listing order of txt files from smallest to Largest:"
 ls -lh "$file_path"/*.txt | sort -h | awk '{print $9}'
 
 
+Level 8
+
+
+
 
 
 
