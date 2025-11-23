@@ -529,6 +529,16 @@ ls -lh "$file_path"/*.txt | sort -h | awk '{print $9}'
 
 Level 8
 
+#!/bin/bash
+
+word="million"
+echo "Files containing $word :"
+grep -l  "$word" *.log
+
+
+Level 9
+
+
 
 
 
