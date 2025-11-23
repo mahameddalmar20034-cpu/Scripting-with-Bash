@@ -537,6 +537,22 @@ grep -l  "$word" *.log
 
 
 Level 9
+vi level9.sh
+
+#!/bin/bash
+watch_dir="$HOME/Battlefield"
+snapshot=$(ls -l "$watch_dir")
+while true
+do
+new_snapshot=$(ls -l "$watch_dir")
+ if [[ "$snapshot" !=  "$new_snapshot" ]];then
+    echo "$(date): Change in "$watch_dir"" >> "$HOME/dir_changes.log"
+        ls -l "$watch_dir" | awk {'print $6, $7, $8, $9'} >> "$HOME/dir_changes.log
+                fi
+     echo "Watching for changes.... (press ctrl+C to exit)"
+     sleep 10
+    done
+
 
 
 
