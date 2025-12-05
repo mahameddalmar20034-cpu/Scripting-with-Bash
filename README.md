@@ -558,7 +558,6 @@ sleep 10
     Level 10
   
     
-    vi level10.sh 
 #!/bin/bash
 file_path="$HOME/Arena_Boss/"
 if [[ ! -d "$file_path" ]];then
@@ -579,7 +578,7 @@ for i in {1..5}; do
 done
 
 echo "File ranked in order of size"
-ls -lhS "$file_path" | awk '{print $9}'
+ls -S "$file_path"
 
 mkdir $HOME/Victory_Archive
 word="victory"
@@ -597,6 +596,7 @@ echo "Moved matching files to:"$archive_filepath""
 else
         echo "No files in "$file_path" contain the word "$word"."
 fi
+
 
 
 
