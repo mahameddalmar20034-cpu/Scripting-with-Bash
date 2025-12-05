@@ -556,6 +556,49 @@ sleep 10
 
 
     Level 10
+  
+    
+    vi level10.sh 
+#!/bin/bash
+file_path="$HOME/Arena_Boss/"
+if [[ ! -d "$file_path" ]];then
+        mkdir "$file_path"
+else
+        echo "File already exists"
+fi
+
+
+for i in {1..5}; do
+        file=""$file_path"/file${i}.txt"
+        : > "$file"
+
+        random_number=$(( RANDOM % 11 + 10 ))
+        for ((line=1; line <= $random_number;line++));do
+                echo "This is line $line in $file" >> "$file"
+        done
+done
+
+echo "File ranked in order of size"
+ls -lhS "$file_path" | awk '{print $9}'
+
+mkdir $HOME/Victory_Archive
+word="victory"
+archive_filepath="$HOME/Victory_Archive"
+matches=$(grep -rl "$word" "$file_path")
+
+
+if [[ -n "$matches" ]]; then
+for file in $matches; do
+        echo "The word "$word" found in $file"
+
+mv "$file" "$archive_filepath"/
+done
+echo "Moved matching files to:"$archive_filepath""
+else
+        echo "No files in "$file_path" contain the word "$word"."
+fi
+
+
 
 
 
