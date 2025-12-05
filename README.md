@@ -557,8 +557,7 @@ sleep 10
 
     Level 10
   
-    
-#!/bin/bash
+    #!/bin/bash
 file_path="$HOME/Arena_Boss/"
 if [[ ! -d "$file_path" ]];then
         mkdir "$file_path"
