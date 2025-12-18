@@ -596,6 +596,23 @@ else
         echo "No files in "$file_path" contain the word "$word"."
 fi
 
+Level 11
+
+#!/bin/bash
+directory="$HOME/Arena/"
+Directory_spaceuse=$(df -P "$directory" | awk 'NR==2 {print $5}' | tr -d '%')
+
+Threshold=80
+
+if [[ "$Directory_spaceuse" -ge "$Threshold" ]]
+then echo "Alert! Directory disk space is at "$Directory_spaceuse" and  has reached threshold."
+
+else
+        echo "Disk space is at "$Directory_spaceuse" well below the  threshold."
+fi
+
+
+
 
 
 
