@@ -612,6 +612,20 @@ fi
 
 
 
+Level 12
+#!/bin/bash
+while read line; do
+        IFS='=' read key value <<< "$line" # The triple here acts as an input
+echo "Key:$key | Value: $value"
+
+done < config.set
+
+
+Level 13
+
+
+
+
 
 
 
